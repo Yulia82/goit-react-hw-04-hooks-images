@@ -10,7 +10,6 @@ function Modal({ onClose, src, alt }) {
     if (evt.code === "Escape") {
       onClose();
       window.removeEventListener("keydown", handleKeyDown);
-      // console.log('сняли слушатель')
     }
   };
 
@@ -18,12 +17,10 @@ function Modal({ onClose, src, alt }) {
     if (evt.currentTarget === evt.target) {
       onClose();
       window.removeEventListener("keydown", handleKeyDown);
-      // console.log('сняли слушатель')
     }
   };
 
   useEffect(() => {
-    console.log("работает useEffect модалки");
     window.addEventListener("keydown", handleKeyDown);
   });
 
